@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>Web Data Connector for League of Legends Match Data</title>
+		<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://connectors.tableau.com/libs/tableauwdc-2.0.0-beta.js"></script>
+		<script src="wdc-lol.js"></script>
+		<style>
+			html{
+				background-color: #1f253d;
+				text-align: center;
+			}
+			p{
+				color: #f1f1f1;
+				font-family: sans-serif;
+				text-align: center;
+			}
+			p:first-of-type{
+				font-size: 1.5em;
+			}
+			input{
+				font-family: sans-serif;
+				padding: 5px;
+				display: inline-block;
+				margin: 0 auto;
+				margin-top: 20px;
+				border: 1px solid #785a28;
+				background-color: #1e2328;
+				padding: 6px 12px;
+				height: 34px;
+				color: #f1f1f1;
+			}
+			input:focus{
+				outline: rgba(80, 60, 30, .5) auto 5px;
+			}
+			button{
+				font-family: sans-serif;
+				display: block;
+				margin: 0 auto;
+				margin-top: 20px;
+				font-size: 1.1em;
+				background-color: #f7b147;
+				border: 0;
+				font-family: sans-serif;
+				font-weight: bold;
+				padding: 12px 20px;
+			}
+			button:focus{
+				outline: none;
+				box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+			}
+			button:hover{
+				cursor: pointer;
+			}
+			#logo{
+				margin-top: 30px;
+				display: block;
+				margin: 0 auto;
+			}
+			#inputcontainer{
+				display: inline-block;
+			}
+			#locale{
+				display: inline-block;
+				padding: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="logo" src="http://na.leagueoflegends.com/profiles/lol2_profile/themes/custom/lolt/img/lol_logo.png" alt="League of Legends Logo"/>
+		<p>Match Data - Tableau Web Data Connector</p>
+		<p>Input up to 5 summoner names to retrieve match data for.</p>
+		<input type="text" id="summoner" placeholder="Summoner Name(s)"></input>
+		<select name="locale" id="locale">
+			<option value="NA">NA</option>
+			<option value="BR">BR</option>
+			<option value="EUNE">EUNE</option>
+			<option value="EUW">EUW</option>
+			<option value="JP">JP</option>
+			<option value="KR">KR</option>
+			<option value="LAN">LAN</option>
+			<option value="LAS">LAS</option>
+			<option value="OCE">OCE</option>
+			<option value="RU">RU</option>
+			<option value="SEA">SEA</option>
+			<option value="TR">TR</option>
+		</select>
+		<button onclick="validate()">Send</button>
+	</body>
+</html>
