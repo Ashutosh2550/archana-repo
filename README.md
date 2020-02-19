@@ -1,3 +1,6 @@
+# DEPRECATED
+This WDC is not up to date with the League of Legends API. It is not currently working. Feel free to work on one yourself though! See (https://github.com/tableau/webdataconnector) for more details.
+
 # LoL-Match-Data-WDC
 League of Legends Match Data Web Data Connector for Tableau  
 
